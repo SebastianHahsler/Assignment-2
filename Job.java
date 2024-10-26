@@ -12,13 +12,13 @@ public class Job implements Comparable<Job> {
         this.arrivalTime = arrivalTime;
     }
 
-    // We'll use this for comparisons in our priority queue (SPT or by priority)
+    // For comparisons in our priority queue
     @Override
     public int compareTo(Job other) {
         if (this.priorityLevel != other.priorityLevel) {
             return this.priorityLevel - other.priorityLevel; // Higher priority first
         }
-        return this.processingTime - other.processingTime; // SPT for tasks 1 and 3
+        return this.processingTime - other.processingTime; 
     }
 
     // For debugging purposes
